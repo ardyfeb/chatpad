@@ -29,9 +29,10 @@ import { createChatCompletion } from "../utils/openai";
 
 export function ChatRoute() {
   const chatId = useChatId();
-  const apiKey = useLiveQuery(async () => {
-    return (await db.settings.where({ id: "general" }).first())?.openAiApiKey;
-  });
+  const apiKey = process.env.OPENAI_API_KEY;
+  // const apiKey = useLiveQuery(async () => {
+  //   return (await db.settings.where({ id: "general" }).first())?.openAiApiKey;
+  // });
   const messages = useLiveQuery(() => {
     if (!chatId) return [];
     return db.messages.where("chatId").equals(chatId).sortBy("createdAt");

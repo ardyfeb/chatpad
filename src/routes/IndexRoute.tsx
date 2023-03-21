@@ -26,7 +26,7 @@ export function IndexRoute() {
   return (
     <>
       <Center py="xl" sx={{ height: "100%" }}>
-        <Container size="sm">
+        {/* <Container size="sm">
           <Text>
             <Logo style={{ maxWidth: 240 }} />
           </Text>
@@ -76,7 +76,7 @@ export function IndexRoute() {
               </Button>
             )}
           </Group>
-        </Container>
+        </Container> */}
       </Center>
     </>
   );

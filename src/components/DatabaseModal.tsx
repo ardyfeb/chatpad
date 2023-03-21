@@ -31,7 +31,7 @@ export function DatabaseModal({ children }: { children: ReactElement }) {
         withinPortal
         keepMounted
       >
-        <Flex>
+        <Flex sx={{ gap: 8 }}>
           <Card withBorder sx={{ flex: 1 }}>
             <Text size="xl" align="center">
               {chatsCount}
@@ -83,7 +83,7 @@ export function DatabaseModal({ children }: { children: ReactElement }) {
               const blob = await db.export();
               download(
                 blob,
-                `chatpad-export-${new Date().toLocaleString()}.json`,
+                `chat-export-${new Date().toLocaleString()}.json`,
                 "application/json"
               );
               notifications.show({

@@ -84,7 +84,7 @@ export function Layout() {
               <Link
                 to="/"
                 className="app-region-no-drag"
-                style={{ marginTop: 10, padding: 4 }}
+                style={{ marginTop: 10, padding: 4, textDecoration: 'none' }}
               >
                 <LogoText
                   style={{
@@ -165,13 +165,13 @@ export function Layout() {
                   )}
                 </ActionIcon>
               </Tooltip>
-              <SettingsModal>
+              {/* <SettingsModal>
                 <Tooltip label="Settings">
                   <ActionIcon sx={{ flex: 1 }} size="xl">
                     <IconSettings size={20} />
                   </ActionIcon>
                 </Tooltip>
-              </SettingsModal>
+              </SettingsModal> */}
               <DatabaseModal>
                 <Tooltip label="Database">
                   <ActionIcon sx={{ flex: 1 }} size="xl">
@@ -182,7 +182,7 @@ export function Layout() {
               <Tooltip label="Source Code">
                 <ActionIcon
                   component="a"
-                  href="https://github.com/deiucanta/chatpad"
+                  href="https://github.com/ardyfeb/chatpad"
                   target="_blank"
                   sx={{ flex: 1 }}
                   size="xl"
@@ -193,7 +193,7 @@ export function Layout() {
               <Tooltip label="Follow on Twitter">
                 <ActionIcon
                   component="a"
-                  href="https://twitter.com/deiucanta"
+                  href="https://twitter.com/ardycodes"
                   target="_blank"
                   sx={{ flex: 1 }}
                   size="xl"
@@ -201,7 +201,7 @@ export function Layout() {
                   <IconBrandTwitter size={20} />
                 </ActionIcon>
               </Tooltip>
-              <Tooltip label="Give Feedback">
+              {/* <Tooltip label="Give Feedback">
                 <ActionIcon
                   component="a"
                   href="https://feedback.chatpad.ai"
@@ -219,7 +219,7 @@ export function Layout() {
                 >
                   <IconMessage size={20} />
                 </ActionIcon>
-              </Tooltip>
+              </Tooltip> */}
             </Center>
           </Navbar.Section>
         </Navbar>
