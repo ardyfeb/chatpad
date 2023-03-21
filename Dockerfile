@@ -1,5 +1,5 @@
 # Build the react project
-FROM node:18-alpine as builder
+FROM node:18-alpine
 WORKDIR /app
 
 # Install the node_modules first
@@ -13,7 +13,7 @@ COPY . .
 RUN npm run build
 
 # Default env variables
-ENV PORT=80
+ENV PORT=3000
 ENV HOST=0.0.0.0
 
 ENV OPENAI_API_KEY=
